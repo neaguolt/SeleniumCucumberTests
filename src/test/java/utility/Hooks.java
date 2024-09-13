@@ -2,16 +2,25 @@ package utility;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Hooks {
-    public static BrowserDriver driver;
-    public static ChromeOptions options;
+    protected BrowserDriver driver;
 
     @Before
-    public void setUp() {
-        driver = new BrowserDriver();
+    public void setUp() throws IOException {
+        Properties config;
+        FileInputStream fis;
+        String browser;
+
+        fis = new FileInputStream("src/test/resources/config.properties");
+        config = new Properties();
+        config.load(fis);
+        browser = config.getProperty("browser","chrome");
+        driver = new BrowserDriver(browser);
     }
     @After
     public void tearDown() {
