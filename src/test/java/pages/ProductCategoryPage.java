@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.By;
-
 import static utility.BrowserDriver.driver;
 
 public class ProductCategoryPage {
@@ -9,9 +8,8 @@ public class ProductCategoryPage {
 
     public static String visibility_productcategory() {
 
-        String actualProductCategory = driver.findElement(By.xpath
+        return driver.findElement(By.xpath
                 (productcategory_heading_xpath)).getText();
-        return actualProductCategory;
     }
 }
 

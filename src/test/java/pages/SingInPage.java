@@ -1,14 +1,17 @@
 package pages;
 
 import org.openqa.selenium.By;
+import utility.BrowserDriver;
 
-import static utility.BrowserDriver.driver;
-
-public class SingInPage {
+public class SingInPage extends BrowserDriver{
     public static String username_text_xpath = "//*[@id=\"usr\"]";
     public static String password_text_xpath = "//*[@id=\"pwd\"]";
     public static String login_btn_xpath = "/html/body/center[1]/div/form/input";
     public static String registration_btn_xpath = "//*[@id=\"NewRegistration\"]";
+
+    public SingInPage(String browser){
+        super(browser);
+    }
 
     public static void sendkeys_username() {
         driver.findElement(By.xpath(username_text_xpath)).sendKeys("sa");

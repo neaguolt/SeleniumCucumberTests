@@ -1,0 +1,17 @@
+To insert a YouTube link in a README.md file, follow these steps:
+
+1. Copy the URL of the YouTube video you want to link.
+
+2. Open your README.md file in your preferred text editor.
+
+3. In the location where you want to insert the YouTube link, use the following markdown syntax:
+
+```
+[![Alt Text](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+```
+
+Replace `YOUTUBE_VIDEO_ID` with the actual ID of the YouTube video (which is usually a combination of letters and numbers found in the video URL).
+
+4. Save your README.md file.
+
+This markdown syntax will create an image thumbnail for your video, which will be clickable and redirect users to watch the video on YouTube when clicked.

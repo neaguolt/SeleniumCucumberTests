@@ -8,21 +8,19 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserDriver {
     public static WebDriver driver;
-    public static FirefoxOptions optionsFF;
-    public static ChromeOptions optionsCh;
 
     public BrowserDriver(String browser) {
         if (browser.equalsIgnoreCase("firefox")) {
             // Setup FirefoxDriver
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
                     "/src/test/resources/drivers/geckodriver");
-            optionsFF = new FirefoxOptions();
+            FirefoxOptions optionsFF = new FirefoxOptions();
             driver = new FirefoxDriver(optionsFF);
         } else if (browser.equalsIgnoreCase("chrome")) {
             // Setup ChromeDriver
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
                     "/src/test/resources/drivers/chromedriver");
-            optionsCh = new ChromeOptions();
+            ChromeOptions optionsCh = new ChromeOptions();
             driver = new ChromeDriver(optionsCh);
         } else {
             throw new IllegalArgumentException("Browser not supported: " + browser);

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Hooks {
-    protected BrowserDriver driver;
+    public static BrowserDriver driver;
 
     @Before
     public void setUp() throws IOException {

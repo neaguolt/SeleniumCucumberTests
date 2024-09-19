@@ -2,8 +2,7 @@ package StepDefinitions;
 
 import io.cucumber.java.en.Given;
 
-import static pages.HomePage.click_hamburger_menu;
-import static pages.HomePage.click_singIn_link;
+import static pages.HomePage.*;
 
 public class BasePage {
 
